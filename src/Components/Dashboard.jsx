@@ -104,8 +104,8 @@ export default Dashboard;
 // Styles
 
 const __body = {
-  width: "80%",
-  margin: "5rem auto",
+  width: "85%",
+  margin: "8rem auto",
   display: "flex",
   gap: "2rem",
 };
