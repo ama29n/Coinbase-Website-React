@@ -9,7 +9,7 @@ function AboutUs() {
     <Box sx={__body}>
       <Box sx={__body_heading}>
         <Typography sx={{ fontWeight: "500", fontSize: "1.5rem", color: "rgb(200, 197, 197)" }}>About Us</Typography>
-        <Typography sx={{ fontWeight: "500", fontSize: "3rem", textAlign: "center" }}>Why would You Choose Market Watchmen?</Typography>
+        <Typography sx={{ fontWeight: "500", fontSize: "2rem", textAlign: "center" }}>Why would You Choose Market Watchmen?</Typography>
       </Box>
 
       <Box sx={{ display: "flex", marginTop: "2rem", gap: "2rem" }}>
