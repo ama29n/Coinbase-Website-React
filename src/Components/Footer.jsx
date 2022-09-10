@@ -35,169 +35,174 @@ function Footer() {
     e.preventDefault();
   };
   return (
-    <Box sx={__body}>
-      <Box
-        flex="1 1 31%"
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          "@media(max-width: 820px)": {
+    <Box width="90%" margin="0 auto 2rem" >
+      <Box sx={__body}>
+        <Box
+          flex="1 1 31%"
+          sx={{
+            display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-          },
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: "3rem",
-            fontWeight: "500",
             "@media(max-width: 820px)": {
-              fontSize: "2rem",
+              flexDirection: "column",
+              alignItems: "center",
             },
           }}
         >
-          Coinbase
-        </Typography>
+          <Typography
+            sx={{
+              fontSize: "3rem",
+              fontWeight: "500",
+              "@media(max-width: 820px)": {
+                fontSize: "2rem",
+              },
+            }}
+          >
+            Coinbase
+          </Typography>
 
-        <Typography
-          sx={{
-            color: "rgb(200, 197, 197)",
-            fontWeight: "600",
-            "@media(max-width: 412px)": {
-              textAlign: "center",
-            },
-          }}
-          gutterBottom
-        >
-          GymVast, 18 East 50th Street, 4th Floor, New York, NY 10022
-        </Typography>
+          <Typography
+            sx={{
+              color: "rgb(200, 197, 197)",
+              fontWeight: "600",
+              "@media(max-width: 412px)": {
+                textAlign: "center",
+              },
+            }}
+            gutterBottom
+          >
+            GymVast, 18 East 50th Street, 4th Floor, New York, NY 10022
+          </Typography>
 
-        <Typography
-          sx={{
-            color: "rgb(200, 197, 197)",
-            fontWeight: "600",
-            "@media(max-width: 412px)": {
-              textAlign: "center",
-            },
-          }}
-          gutterBottom
-        >
-          T : +1-202-555-0184E : crypto@coinbase.com
-        </Typography>
+          <Typography
+            sx={{
+              color: "rgb(200, 197, 197)",
+              fontWeight: "600",
+              "@media(max-width: 412px)": {
+                textAlign: "center",
+              },
+            }}
+            gutterBottom
+          >
+            T : +1-202-555-0184E : crypto@coinbase.com
+          </Typography>
 
-        <Box m="2rem 0" display="flex" gap="1rem">
-          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
-            <FacebookIcon />
-          </IconButton>
+          <Box m="2rem 0" display="flex" gap="1rem">
+            <IconButton
+              style={{ backgroundColor: "White", color: "#021338fa" }}
+            >
+              <FacebookIcon />
+            </IconButton>
 
-          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
-            <TwitterIcon />
-          </IconButton>
+            <IconButton
+              style={{ backgroundColor: "White", color: "#021338fa" }}
+            >
+              <TwitterIcon />
+            </IconButton>
 
-          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
-            <InstagramIcon />
-          </IconButton>
+            <IconButton
+              style={{ backgroundColor: "White", color: "#021338fa" }}
+            >
+              <InstagramIcon />
+            </IconButton>
 
-          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
-            <YouTubeIcon />
-          </IconButton>
+            <IconButton
+              style={{ backgroundColor: "White", color: "#021338fa" }}
+            >
+              <YouTubeIcon />
+            </IconButton>
 
-          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
-            <LinkedInIcon />
-          </IconButton>
+            <IconButton
+              style={{ backgroundColor: "White", color: "#021338fa" }}
+            >
+              <LinkedInIcon />
+            </IconButton>
+          </Box>
         </Box>
 
-        <Typography
+        <Box
+          flex="1 1 23%"
           sx={{
-            "@media(max-width: 412px)": {
-              textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            "@media(max-width: 820px)": {
+              flexDirection: "column",
+              alignItems: "center",
             },
           }}
         >
-          © Coinbase Personal Template by Amandeep Singh
-        </Typography>
-      </Box>
+          <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
+            Company
+          </Typography>
+          <UL>
+            {companyLinks.map((link) => {
+              return (
+                <li>
+                  <Anchor href="/" onClick={clickEvent}>
+                    {link}
+                  </Anchor>
+                </li>
+              );
+            })}
+          </UL>
+        </Box>
 
-      <Box
-        flex="1 1 23%"
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          "@media(max-width: 820px)": {
+        <Box
+          flex="1 1 23%"
+          sx={{
+            display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-          },
-        }}
-      >
-        <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
-          Company
-        </Typography>
-        <UL>
-          {companyLinks.map((link) => {
-            return (
-              <li>
-                <Anchor href="/" onClick={clickEvent}>
-                  {link}
-                </Anchor>
-              </li>
-            );
-          })}
-        </UL>
-      </Box>
+            "@media(max-width: 820px)": {
+              flexDirection: "column",
+              alignItems: "center",
+            },
+          }}
+        >
+          <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
+            Learn
+          </Typography>
+          <UL>
+            {learnLinks.map((link) => {
+              return (
+                <li>
+                  <Anchor href="/" onClick={clickEvent}>
+                    {link}
+                  </Anchor>
+                </li>
+              );
+            })}
+          </UL>
+        </Box>
 
-      <Box
-        flex="1 1 23%"
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          "@media(max-width: 820px)": {
+        <Box
+          flex="1 1 23%"
+          sx={{
+            display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-          },
-        }}
-      >
-        <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
-          Learn
-        </Typography>
-        <UL>
-          {learnLinks.map((link) => {
-            return (
-              <li>
-                <Anchor href="/" onClick={clickEvent}>
-                  {link}
-                </Anchor>
-              </li>
-            );
-          })}
-        </UL>
+            "@media(max-width: 820px)": {
+              flexDirection: "column",
+              alignItems: "center",
+            },
+          }}
+        >
+          <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
+            Office
+          </Typography>
+          <UL>
+            {companyLinks.map((link) => {
+              return (
+                <li>
+                  <Anchor href="/" onClick={clickEvent}>
+                    {link}
+                  </Anchor>
+                </li>
+              );
+            })}
+          </UL>
+        </Box>
       </Box>
-
-      <Box
-        flex="1 1 23%"
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          "@media(max-width: 820px)": {
-            flexDirection: "column",
-            alignItems: "center",
-          },
-        }}
-      >
-        <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
-          Office
-        </Typography>
-        <UL>
-          {companyLinks.map((link) => {
-            return (
-              <li>
-                <Anchor href="/" onClick={clickEvent}>
-                  {link}
-                </Anchor>
-              </li>
-            );
-          })}
-        </UL>
-      </Box>
+      <Typography textAlign="center">
+        © Coinbase Personal Template by Amandeep Singh
+      </Typography>
     </Box>
   );
 }
@@ -207,7 +212,7 @@ export default Footer;
 // Styles
 
 const __body = {
-  width: "90%",
+  width: "100%",
   margin: "5rem auto",
   display: "flex",
   gap: "4rem",
