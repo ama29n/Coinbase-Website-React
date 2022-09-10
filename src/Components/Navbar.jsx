@@ -3,16 +3,27 @@ import styled from "styled-components";
 
 function Navbar() {
   const links = ["Home", "Dashboard", "Learn", "FAQ", "Contact", "About"];
+  const clickEvent = (e) => {
+    e.preventDefault();
+  };
   return (
     <Box sx={__navbar}>
-      <Box sx={{ fontSize: "3rem", fontWeight: "500" }}>Coinbase</Box>
+      <Box sx={{
+        fontSize: "3rem",
+        fontWeight: "500",
+        "@media(max-width: 820px)": {
+          fontSize: "2rem"
+      }
+    }}>
+      Coinbase
+    </Box>
 
       <Box>
         <ul style={__list}>
           {links.map((link) => {
             return (
               <li>
-                <Anchor href="/">
+                <Anchor href="/" onClick={clickEvent}>
                   {link}
                 </Anchor>
               </li>
@@ -49,10 +60,10 @@ const __list = {
 };
 
 const Anchor = styled.a`
-    text-decoration: none;
-    color: rgb(200, 197, 197);
-    font-weight: 600;
-    &:hover{
-        color: White;
-    }
+  text-decoration: none;
+  color: rgb(200, 197, 197);
+  font-weight: 600;
+  &:hover {
+    color: White;
+  }
 `;

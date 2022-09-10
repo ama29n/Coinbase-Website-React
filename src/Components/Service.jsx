@@ -14,19 +14,19 @@ function Service() {
         <Box display="flex" gap="2rem" width="80%" margin="6rem auto 0">
             <Box display="flex" flexDirection="column" gap="1.5rem" alignItems="center">
                 <Box><img alt="service" src={service1} /></Box>
-                <Typography fontSize="1.5rem">Manage your portfolio</Typography>
+                <Typography fontSize="1.5rem" textAlign="center">Manage your portfolio</Typography>
                 <Typography textAlign="center" color="rgb(200, 197, 197)">Coinbase supports a variety of the most popular digital currencies.</Typography>
             </Box>
 
             <Box display="flex" flexDirection="column" gap="1.5rem" alignItems="center">
                 <Box><img alt="service" src={service2} /></Box>
-                <Typography fontSize="1.5rem">Recurring buys</Typography>
+                <Typography fontSize="1.5rem" textAlign="center">Recurring buys</Typography>
                 <Typography textAlign="center" color="rgb(200, 197, 197)">Coinbase supports a variety of the most popular digital currencies.</Typography>
             </Box>
 
             <Box display="flex" flexDirection="column" gap="1.5rem" alignItems="center">
                 <Box><img alt="service" src={service3} /></Box>
-                <Typography fontSize="1.5rem">Mobile apps</Typography>
+                <Typography fontSize="1.5rem" textAlign="center">Mobile apps</Typography>
                 <Typography textAlign="center" color="rgb(200, 197, 197)">Coinbase supports a variety of the most popular digital currencies.</Typography>
             </Box>
         </Box>

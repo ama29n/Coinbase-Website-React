@@ -1,11 +1,11 @@
 import { Box, Typography, IconButton } from "@mui/material";
 import styled from "styled-components";
 
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function Footer() {
   const companyLinks = [
@@ -36,47 +36,83 @@ function Footer() {
   };
   return (
     <Box sx={__body}>
-      <Box flex="1 1 31%">
-        <Typography sx={{ fontSize: "3rem", fontWeight: "500" }}>
+      <Box
+        flex="1 1 31%"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          "@media(max-width: 820px)": {
+            flexDirection: "column",
+            alignItems: "center",
+          },
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "3rem",
+            fontWeight: "500",
+            "@media(max-width: 820px)": {
+              fontSize: "2rem",
+            },
+          }}
+        >
           Coinbase
         </Typography>
 
-        <Typography sx={{ color: "rgb(200, 197, 197)", fontWeight: "600" }} gutterBottom>
+        <Typography
+          sx={{ color: "rgb(200, 197, 197)", fontWeight: "600" }}
+          gutterBottom
+        >
           GymVast, 18 East 50th Street, 4th Floor, New York, NY 10022
         </Typography>
 
-        <Typography sx={{ color: "rgb(200, 197, 197)", fontWeight: "600" }} gutterBottom>
-        T : +1-202-555-0184E : crypto@coinbase.com
+        <Typography
+          sx={{ color: "rgb(200, 197, 197)", fontWeight: "600" }}
+          gutterBottom
+        >
+          T : +1-202-555-0184E : crypto@coinbase.com
         </Typography>
-        
-        <Box mt="2rem" display="flex" gap="1rem">
-            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
-                <FacebookIcon />
-            </IconButton>
 
-            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
-                <TwitterIcon />
-            </IconButton>
+        <Box m="2rem 0" display="flex" gap="1rem">
+          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
+            <FacebookIcon />
+          </IconButton>
 
-            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
-                <InstagramIcon />
-            </IconButton>
+          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
+            <TwitterIcon />
+          </IconButton>
 
-            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
-                <YouTubeIcon />
-            </IconButton>
+          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
+            <InstagramIcon />
+          </IconButton>
 
-            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
-                <LinkedInIcon />
-            </IconButton>
+          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
+            <YouTubeIcon />
+          </IconButton>
+
+          <IconButton style={{ backgroundColor: "White", color: "#021338fa" }}>
+            <LinkedInIcon />
+          </IconButton>
         </Box>
+
+        <Typography>© Coinbase Personal Template by Amandeep Singh</Typography>
       </Box>
 
-      <Box flex="1 1 23%">
+      <Box
+        flex="1 1 23%"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          "@media(max-width: 820px)": {
+            flexDirection: "column",
+            alignItems: "center",
+          },
+        }}
+      >
         <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
           Company
         </Typography>
-        <ul style={__list}>
+        <UL>
           {companyLinks.map((link) => {
             return (
               <li>
@@ -86,14 +122,24 @@ function Footer() {
               </li>
             );
           })}
-        </ul>
+        </UL>
       </Box>
 
-      <Box flex="1 1 23%">
+      <Box
+        flex="1 1 23%"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          "@media(max-width: 820px)": {
+            flexDirection: "column",
+            alignItems: "center",
+          },
+        }}
+      >
         <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
           Learn
         </Typography>
-        <ul style={__list}>
+        <UL>
           {learnLinks.map((link) => {
             return (
               <li>
@@ -103,14 +149,24 @@ function Footer() {
               </li>
             );
           })}
-        </ul>
+        </UL>
       </Box>
 
-      <Box flex="1 1 23%">
+      <Box
+        flex="1 1 23%"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          "@media(max-width: 820px)": {
+            flexDirection: "column",
+            alignItems: "center",
+          },
+        }}
+      >
         <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
           Office
         </Typography>
-        <ul style={__list}>
+        <UL>
           {companyLinks.map((link) => {
             return (
               <li>
@@ -120,7 +176,7 @@ function Footer() {
               </li>
             );
           })}
-        </ul>
+        </UL>
       </Box>
     </Box>
   );
@@ -135,13 +191,10 @@ const __body = {
   margin: "5rem auto",
   display: "flex",
   gap: "4rem",
-};
-
-const __list = {
-  display: "flex",
-  listStyle: "none",
-  gap: "1rem",
-  flexDirection: "column",
+  "@media(max-width: 820px)": {
+    flexDirection: "column",
+    alignItems: "center",
+  },
 };
 
 const Anchor = styled.a`
@@ -151,4 +204,15 @@ const Anchor = styled.a`
   &:hover {
     color: White;
   }
+`;
+
+const UL = styled.ul`
+display: flex;
+list-style: none;
+gap: 1rem;
+flex-direction: column;
+
+@media (max-width: 820px) {
+  align-items: center;
+}
 `;

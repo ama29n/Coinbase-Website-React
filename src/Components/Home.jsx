@@ -7,7 +7,7 @@ function Home() {
     <Box sx={__body}>
         <Box sx={__bodyContent}>
             <Box sx={{ color: "#2499f9", fontWeight: "600" }}>Investment Made Easy</Box>
-            <Box sx={{ fontSize: "4.3rem", fontWeight: "500" }}>The Easiest Way to Track Multiple Currencies</Box>
+            <Box sx={__bodyContent_title}>The Easiest Way to Track Multiple Currencies</Box>
             <Box sx={{ color: "rgb(200, 197, 197)" }}>Market Watchman allows you to monitor your balances, trade without limits and earn for specific coins.</Box>
             <Box sx={{ display: "flex", gap: "1rem" }}>
                 <Button variant="contained">Try Now</Button>
@@ -40,3 +40,14 @@ const __bodyContent = {
     justifyContent: "flex-end",
     gap: "2rem"
 };
+
+const __bodyContent_title = {
+    fontSize: "4.3rem",
+    fontWeight: "500",
+    "@media(max-width: 1024px)": {
+        fontSize: "3rem"
+    },
+    "@media(max-width: 820px)": {
+        fontSize: "1.5rem"
+    }
+}
