@@ -1,5 +1,6 @@
 import { Box, Button } from "@mui/material";
 import HomeImage from "../Assets/home.png";
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 function Home() {
   return (
@@ -10,7 +11,7 @@ function Home() {
             <Box sx={{ color: "rgb(200, 197, 197)" }}>Market Watchman allows you to monitor your balances, trade without limits and earn for specific coins.</Box>
             <Box sx={{ display: "flex", gap: "1rem" }}>
                 <Button variant="contained">Try Now</Button>
-                <Button variant="text">How is works?</Button>
+                <Button variant="text" endIcon={<QuestionMarkIcon />}>How is works</Button>
             </Box>
         </Box>
 
