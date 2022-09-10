@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.380063fc.css",
-    "main.js": "/static/js/main.bad44c81.js",
-    "static/media/about.png": "/static/media/about.6713d5aa6adaddde4f7a.png",
-    "static/media/home.png": "/static/media/home.a9136be591eabf538074.png",
-    "static/media/card.png": "/static/media/card.f9017bf395d5cc4917d5.png",
-    "static/media/signupBackground.png": "/static/media/signupBackground.a9042bba874ddb162045.png",
-    "index.html": "/index.html",
-    "main.380063fc.css.map": "/static/css/main.380063fc.css.map",
-    "main.bad44c81.js.map": "/static/js/main.bad44c81.js.map"
+    "main.css": "/Coinbase-Website-React/static/css/main.380063fc.css",
+    "main.js": "/Coinbase-Website-React/static/js/main.5c296a32.js",
+    "static/media/about.png": "/Coinbase-Website-React/static/media/about.6713d5aa6adaddde4f7a.png",
+    "static/media/home.png": "/Coinbase-Website-React/static/media/home.a9136be591eabf538074.png",
+    "static/media/card.png": "/Coinbase-Website-React/static/media/card.f9017bf395d5cc4917d5.png",
+    "static/media/signupBackground.png": "/Coinbase-Website-React/static/media/signupBackground.a9042bba874ddb162045.png",
+    "index.html": "/Coinbase-Website-React/index.html",
+    "main.380063fc.css.map": "/Coinbase-Website-React/static/css/main.380063fc.css.map",
+    "main.5c296a32.js.map": "/Coinbase-Website-React/static/js/main.5c296a32.js.map"
   },
   "entrypoints": [
     "static/css/main.380063fc.css",
-    "static/js/main.bad44c81.js"
+    "static/js/main.5c296a32.js"
   ]
 }
