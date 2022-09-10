@@ -1,9 +1,154 @@
-import React from 'react'
+import { Box, Typography, IconButton } from "@mui/material";
+import styled from "styled-components";
+
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Footer() {
+  const companyLinks = [
+    "About",
+    "Careers",
+    "Affiliates",
+    "Blog",
+    "Press",
+    "Investors",
+    "Legal & Privacy",
+    "Cookie policy",
+    "Cookie preferences",
+  ];
+  const learnLinks = [
+    "Browse crypto prices",
+    "Coinbase Bytes newsletter",
+    "Crypto basics",
+    "Tips & Turoials",
+    "Market Updates",
+    "What is Bitcoin?",
+    "What is crypto?",
+    "What is a blockchain?",
+    "How to set up a crypto waller",
+    "How to send crypto",
+  ];
+  const clickEvent = (e) => {
+    e.preventDefault();
+  };
   return (
-    <div>Footer</div>
-  )
+    <Box sx={__body}>
+      <Box flex="1 1 31%">
+        <Typography sx={{ fontSize: "3rem", fontWeight: "500" }}>
+          Coinbase
+        </Typography>
+
+        <Typography sx={{ color: "rgb(200, 197, 197)", fontWeight: "600" }} gutterBottom>
+          GymVast, 18 East 50th Street, 4th Floor, New York, NY 10022
+        </Typography>
+
+        <Typography sx={{ color: "rgb(200, 197, 197)", fontWeight: "600" }} gutterBottom>
+        T : +1-202-555-0184E : crypto@coinbase.com
+        </Typography>
+        
+        <Box mt="2rem" display="flex" gap="1rem">
+            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
+                <FacebookIcon />
+            </IconButton>
+
+            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
+                <TwitterIcon />
+            </IconButton>
+
+            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
+                <InstagramIcon />
+            </IconButton>
+
+            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
+                <YouTubeIcon />
+            </IconButton>
+
+            <IconButton style={{ backgroundColor: "White", color: "#021338fa"}}>
+                <LinkedInIcon />
+            </IconButton>
+        </Box>
+      </Box>
+
+      <Box flex="1 1 23%">
+        <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
+          Company
+        </Typography>
+        <ul style={__list}>
+          {companyLinks.map((link) => {
+            return (
+              <li>
+                <Anchor href="/" onClick={clickEvent}>
+                  {link}
+                </Anchor>
+              </li>
+            );
+          })}
+        </ul>
+      </Box>
+
+      <Box flex="1 1 23%">
+        <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
+          Learn
+        </Typography>
+        <ul style={__list}>
+          {learnLinks.map((link) => {
+            return (
+              <li>
+                <Anchor href="/" onClick={clickEvent}>
+                  {link}
+                </Anchor>
+              </li>
+            );
+          })}
+        </ul>
+      </Box>
+
+      <Box flex="1 1 23%">
+        <Typography fontSize="1.5rem" fontWeight="500" gutterBottom>
+          Office
+        </Typography>
+        <ul style={__list}>
+          {companyLinks.map((link) => {
+            return (
+              <li>
+                <Anchor href="/" onClick={clickEvent}>
+                  {link}
+                </Anchor>
+              </li>
+            );
+          })}
+        </ul>
+      </Box>
+    </Box>
+  );
 }
 
-export default Footer
+export default Footer;
+
+// Styles
+
+const __body = {
+  width: "90%",
+  margin: "5rem auto",
+  display: "flex",
+  gap: "4rem",
+};
+
+const __list = {
+  display: "flex",
+  listStyle: "none",
+  gap: "1rem",
+  flexDirection: "column",
+};
+
+const Anchor = styled.a`
+  text-decoration: none;
+  color: rgb(200, 197, 197);
+  font-weight: 600;
+  &:hover {
+    color: White;
+  }
+`;

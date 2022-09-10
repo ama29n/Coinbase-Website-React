@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Background from "../Assets/signupBackground.png";
-import Card from "../Assets/card.png";
+// import Card from "../Assets/card.png";
 
 function SignUp() {
   return (
