@@ -1,1 +1,1 @@
-# Coinbase-Website-React
+# Coinbase Website React
