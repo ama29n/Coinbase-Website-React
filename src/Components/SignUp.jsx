@@ -1,21 +1,40 @@
 import { Box } from "@mui/material";
 import Background from "../Assets/signupBackground.png";
-// import Card from "../Assets/card.png";
+import Card from "../Assets/card.png";
 
 function SignUp() {
   return (
-    <Box sx={{
+    <Box
+      sx={{
         backgroundImage: `url(${Background})`,
-        height: "300px",
         display: "flex",
-        justifyContent: "space-around",
-        // alignItems: "center"
-    }}>
-        <Box fontSize="4rem" fontWeight="500">Sign Up</Box>
-        
-        {/* <Box height="300px">
-            <img alt="card" src={Card} style={{ width: "100%", height: "auto" }}/>
-        </Box> */}
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
+      <Box
+        sx={{
+          fontSize: "3rem",
+          fontWeight: "500",
+          padding: "2rem",
+          "@media(max-width: 820px)": {
+            fontSize: "1.5rem"
+          },
+          "@media(max-width: 412px)": {
+            fontSize: "1rem"
+          },
+        }}
+      >
+        Sign up without any bank account linking any card
+      </Box>
+
+      <Box>
+        <img
+          alt="card"
+          src={Card}
+          style={{ width: "100%", height: "auto", marginBottom: "-4px" }}
+        />
+      </Box>
     </Box>
   );
 }
