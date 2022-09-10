@@ -3,7 +3,14 @@ import { Box, Typography, Button } from "@mui/material";
 function Newsletter() {
   return (
     <Box sx={__body}>
-      <Box flex="1 1 50%" display="flex" flexDirection="column">
+      <Box sx={{
+        flex: "1 1 50%",
+        display: "flex",
+        flexDirection: "column",
+        "@media(max-width: 412px)": {
+            alignItems: "center",
+        },
+      }}>
         <Typography
           sx={{
             fontWeight: "500",
@@ -27,8 +34,10 @@ function Newsletter() {
         "@media(max-width: 820px)": {
             flexDirection: "column",
             alignItems: "flex-start"
-        }
-
+        },
+        "@media(max-width: 412px)": {
+            alignItems: "center",
+          },
       }}>
         <input style={__input} placeholder="Enter your email address..." />
         <Button variant="contained">Subscribe</Button>
@@ -47,6 +56,9 @@ const __body = {
   padding: "7rem 5rem",
   alignItems: "center",
   marginBottom: "1rem",
+  "@media(max-width: 412px)": {
+    flexDirection: "column"
+  },
 };
 
 const __input = {
@@ -63,5 +75,8 @@ const __body_title = {
     fontSize: "2rem",
     "@media(max-width: 820px)": {
         fontSize: "1.5rem"
-    }
+    },
+    "@media(max-width: 412px)": {
+        textAlign: "center"
+    },
 };

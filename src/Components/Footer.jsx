@@ -60,14 +60,26 @@ function Footer() {
         </Typography>
 
         <Typography
-          sx={{ color: "rgb(200, 197, 197)", fontWeight: "600" }}
+          sx={{
+            color: "rgb(200, 197, 197)",
+            fontWeight: "600",
+            "@media(max-width: 412px)": {
+              textAlign: "center",
+            },
+          }}
           gutterBottom
         >
           GymVast, 18 East 50th Street, 4th Floor, New York, NY 10022
         </Typography>
 
         <Typography
-          sx={{ color: "rgb(200, 197, 197)", fontWeight: "600" }}
+          sx={{
+            color: "rgb(200, 197, 197)",
+            fontWeight: "600",
+            "@media(max-width: 412px)": {
+              textAlign: "center",
+            },
+          }}
           gutterBottom
         >
           T : +1-202-555-0184E : crypto@coinbase.com
@@ -95,7 +107,15 @@ function Footer() {
           </IconButton>
         </Box>
 
-        <Typography>© Coinbase Personal Template by Amandeep Singh</Typography>
+        <Typography
+          sx={{
+            "@media(max-width: 412px)": {
+              textAlign: "center",
+            },
+          }}
+        >
+          © Coinbase Personal Template by Amandeep Singh
+        </Typography>
       </Box>
 
       <Box
@@ -207,12 +227,12 @@ const Anchor = styled.a`
 `;
 
 const UL = styled.ul`
-display: flex;
-list-style: none;
-gap: 1rem;
-flex-direction: column;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  flex-direction: column;
 
-@media (max-width: 820px) {
-  align-items: center;
-}
+  @media (max-width: 820px) {
+    align-items: center;
+  }
 `;

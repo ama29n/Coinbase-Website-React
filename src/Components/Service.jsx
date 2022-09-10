@@ -11,7 +11,16 @@ function Service() {
             <Typography sx={{ fontWeight: "500", fontSize: "2rem", textAlign: "center" }}>Market Watchmen has a variety of features that make it the best place to start trading</Typography>
         </Box>
 
-        <Box display="flex" gap="2rem" width="80%" margin="6rem auto 0">
+        <Box sx={{
+            display: "flex",
+            gap: "2rem",
+            width: "80%",
+            margin: "6rem auto 0",
+            "@media(max-width: 412px)": {
+                flexDirection: "column",
+                gap: "5rem"
+            },
+        }}>
             <Box display="flex" flexDirection="column" gap="1.5rem" alignItems="center">
                 <Box><img alt="service" src={service1} /></Box>
                 <Typography fontSize="1.5rem" textAlign="center">Manage your portfolio</Typography>

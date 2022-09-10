@@ -8,18 +8,20 @@ function Navbar() {
   };
   return (
     <Box sx={__navbar}>
-      <Box sx={{
-        fontSize: "3rem",
-        fontWeight: "500",
-        "@media(max-width: 820px)": {
-          fontSize: "2rem"
-      }
-    }}>
-      Coinbase
-    </Box>
+      <Box
+        sx={{
+          fontSize: "3rem",
+          fontWeight: "500",
+          "@media(max-width: 820px)": {
+            fontSize: "2rem",
+          },
+        }}
+      >
+        Coinbase
+      </Box>
 
       <Box>
-        <ul style={__list}>
+        <UL>
           {links.map((link) => {
             return (
               <li>
@@ -29,10 +31,18 @@ function Navbar() {
               </li>
             );
           })}
-        </ul>
+        </UL>
       </Box>
 
-      <Box sx={{ display: "flex", gap: "1rem" }}>
+      <Box
+        sx={{
+          display: "flex",
+          gap: "1rem",
+          "@media(max-width: 412px)": {
+            display: "none",
+          },
+        }}
+      >
         <Button variant="contained">Sign In</Button>
         <Button variant="text">Sign Up</Button>
       </Box>
@@ -51,12 +61,9 @@ const __navbar = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-};
-
-const __list = {
-  display: "flex",
-  listStyle: "none",
-  gap: "1.5rem",
+  "@media(max-width: 412px)": {
+    justifyContent: "center"
+  },
 };
 
 const Anchor = styled.a`
@@ -65,5 +72,15 @@ const Anchor = styled.a`
   font-weight: 600;
   &:hover {
     color: White;
+  }
+`;
+
+const UL = styled.ul`
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+
+  @media (max-width: 820px) {
+    display: none;
   }
 `;
