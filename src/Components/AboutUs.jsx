@@ -11,7 +11,7 @@ function AboutUs() {
           sx={{
             fontWeight: "500",
             fontSize: "1.5rem",
-            color: "rgb(200, 197, 197)",
+            color: "rgb(200, 197, 197)"
           }}
         >
           About Us
